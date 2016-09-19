@@ -1,4 +1,4 @@
-![](docs/img.png)
+![](docs/creator_logo.png)
 
 # The WeatherStation iOS application
 WeatherStation iOS application is part of a bigger project. Using code from this respository You will
