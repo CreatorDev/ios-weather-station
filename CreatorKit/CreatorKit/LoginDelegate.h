@@ -37,6 +37,7 @@
 @protocol LoginDelegate
 @property(nonatomic, readonly, nonnull) UIViewController *safariRootViewController;
 @property(strong, nonatomic, nonnull) NSString *authenticateToken;
+@property(strong, readonly, nonnull) NSString *creatorClientId;
 @property(strong, readonly, nonnull) NSString *creatorRedirectUrlScheme;
 @property(nonatomic, weak, nullable) id<OpenUrlProtocol> openUrlDelegate;
 - (void)presentMainViewControllerWithDeviceServerApi:(nonnull DeviceServerApi *)deviceServerApi;

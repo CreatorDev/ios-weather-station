@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>io.creatordev.kit.powerswitch</string>
+				<string>io.creatordev.weatherstation</string>
 			</array>
 		</dict>
 	</array>

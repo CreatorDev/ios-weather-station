@@ -37,7 +37,6 @@
 
 
 static NSString *DeveloperIdServerUrl = @"https://developer-id.flowcloud.systems";
-static NSString *CreatorClientId = @"1c6c7bee-b5d0-440c-9b5a-61f54a62c18d";
 static NSString *CreatorRedirectUrlPath = @"/callback";
 static NSString *IdTokenTag = @"id_token";
 
@@ -56,7 +55,7 @@ static NSString *IdTokenTag = @"id_token";
          completionHandler:(LoginCompletionBlock)completion
 {
     NSString *redirectUrl = [NSString stringWithFormat:@"%@:%@", loginDelegate.creatorRedirectUrlScheme, CreatorRedirectUrlPath];
-    NSString *authenticateUrlStr = [NSString stringWithFormat:@"https://id.creatordev.io/oauth2/auth?client_id=%@&scope=core+openid+offline&redirect_uri=%@&state=dummy_state&nonce=%@&response_type=%@", CreatorClientId, redirectUrl, [NSUUID UUID].UUIDString, IdTokenTag];
+    NSString *authenticateUrlStr = [NSString stringWithFormat:@"https://id.creatordev.io/oauth2/auth?client_id=%@&scope=core+openid+offline&redirect_uri=%@&state=dummy_state&nonce=%@&response_type=%@", loginDelegate.creatorClientId, redirectUrl, [NSUUID UUID].UUIDString, IdTokenTag];
     NSURL *authenticateUrl = [NSURL URLWithString:authenticateUrlStr];
     
     __weak typeof(self) weakSelf = self;

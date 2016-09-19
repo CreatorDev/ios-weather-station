@@ -64,8 +64,12 @@
     return self.window.rootViewController;
 }
 
+- (NSString *)creatorClientId {
+    return @"600275e7-5476-4ff0-b49c-549686371a83";
+}
+
 - (NSString *)creatorRedirectUrlScheme {
-    return @"io.creatordev.kit.powerswitch";//FIXME: Change to Weather url scheme
+    return @"io.creatordev.weatherstation";
 }
 
 - (void)presentMainViewControllerWithDeviceServerApi:(nonnull DeviceServerApi *)deviceServerApi {
