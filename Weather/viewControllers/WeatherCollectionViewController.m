@@ -164,20 +164,16 @@
 }
 
 - (void)startPollingTimer {
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        if (self.pollingTimer == nil) {
-            TimerTarget *timerTarget = [TimerTarget new];
-            timerTarget.realTarget = self;
-            self.pollingTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:timerTarget selector:@selector(pollingTimerFired:) userInfo:nil repeats:YES];
-        }
-    }];
+    if (self.pollingTimer == nil) {
+        TimerTarget *timerTarget = [TimerTarget new];
+        timerTarget.realTarget = self;
+        self.pollingTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:timerTarget selector:@selector(pollingTimerFired:) userInfo:nil repeats:YES];
+    }
 }
 
 - (void)killPollingTimer {
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        [self.pollingTimer invalidate];
-        self.pollingTimer = nil;
-    }];
+    [self.pollingTimer invalidate];
+    self.pollingTimer = nil;
 }
 
 - (void)presentLoginViewController {
