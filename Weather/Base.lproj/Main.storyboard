@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Weather Collection View Controller-->
+        <!--Weather Station-->
         <scene sceneID="8vW-z9-jeD">
             <objects>
                 <collectionViewController id="PXf-bA-mGt" customClass="WeatherCollectionViewController" sceneMemberID="viewController">
@@ -123,7 +123,7 @@
                             <outlet property="delegate" destination="PXf-bA-mGt" id="Zs9-Uq-3HL"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Tl7-J4-bSs">
+                    <navigationItem key="navigationItem" title="Weather Station" id="Tl7-J4-bSs">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="u8g-jt-2Fa">
                             <connections>
                                 <action selector="logoutAction:" destination="PXf-bA-mGt" id="xkm-f6-HRd"/>
